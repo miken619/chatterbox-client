@@ -94,8 +94,23 @@ form input[type=text] {
     background-color: #0090da;
 }
 
-#messages {
-  width: 200px;
-  height: 50px;
+#message {
+  box-sizing: border-box;
+  resize: none;
+  font-size: 15px;
 }
 
+#chats {
+  overflow-y: scroll;
+  height: 500px;
+}
+
+.footer {
+  width: 500px;
+  margin: auto;
+  text-align: left;
+  background: white;
+  padding: 50px 60px;
+  border: solid #ddd;
+  border-width: 0 1px 1px 1px;
+}

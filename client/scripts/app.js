@@ -134,7 +134,16 @@ $('document').ready(function() {
     message.roomname = room;
     app.send(message);
     app.fetch(room);
+    $('#message').val('');
   };
+
+  $('#message').keypress(function (e) {
+    if (e.which === 13) {
+      app.handleSubmit();
+      e.preventDefault();
+    }
+  });
+
 
   $('.submit').on('click', app.handleSubmit);
 
@@ -143,12 +152,6 @@ $('document').ready(function() {
   setInterval(function() {
     app.fetch(currentRoom);
   }, 5000);
-
-  app.send({
-    text: 'hello',
-    username: 'scrub1',
-    roomname: 'other'
-  });
 
   return app;
 });
