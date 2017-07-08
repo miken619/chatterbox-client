@@ -14,6 +14,7 @@
         if (newSearch !== '' & newSearch !== '?') {
           newSearch += '&';
         }
+   
         newSearch += 'username=' + (prompt('What is your name?') || 'anonymous');
         window.location.search = newSearch;
       }
@@ -26,7 +27,16 @@
     <div id="main">
       <h1>chatterbox</h1>
       <!-- Your HTML goes here! -->
+      <span>Room</span>
+      <select id='roomSelect'>
+        <option value="select a room">select a room</option>
+        <option value="lobby">Lobby</option>
+      </select>
+      <input type="text" id="message"></input>
+      <button class = "submit">Send Message</button>
     </div>
-    <div id="chats"></div>
+    
+    <div id="chats">
+    </div>
   </body>
 </html>
